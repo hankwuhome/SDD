@@ -1,0 +1,269 @@
+/* 匯入 Angular Material 預設主題 */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* 全域樣式 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+/* 容器樣式 */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 卡片樣式 */
+.mat-mdc-card {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 0;
+}
+
+.mat-mdc-card-header {
+  text-align: center;
+  padding: 24px 24px 16px;
+}
+
+.mat-mdc-card-content {
+  padding: 16px 24px 24px;
+}
+
+/* 表單樣式 */
+.mat-mdc-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-mdc-form-field:last-child {
+  margin-bottom: 0;
+}
+
+/* 按鈕樣式 */
+.mat-mdc-raised-button,
+.mat-mdc-stroked-button {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.mat-mdc-raised-button:last-child,
+.mat-mdc-stroked-button:last-child {
+  margin-bottom: 0;
+}
+
+/* 工具列樣式 */
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+/* 表格樣式 */
+.mat-mdc-table {
+  width: 100%;
+}
+
+/* 對話框樣式 */
+.mat-mdc-dialog-container {
+  padding: 0;
+}
+
+.mat-mdc-dialog-title {
+  margin: 0;
+  padding: 20px 24px;
+}
+
+.mat-mdc-dialog-content {
+  padding: 0 24px 20px;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.mat-mdc-dialog-actions {
+  padding: 8px 24px 20px;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+/* Snackbar 樣式 */
+.success-snackbar {
+  --mdc-snackbar-container-color: #4caf50;
+  --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: #f44336;
+  --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.warning-snackbar {
+  --mdc-snackbar-container-color: #ff9800;
+  --mdc-snackbar-supporting-text-color: #fff;
+}
+
+/* 工具類別 */
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.margin-top {
+  margin-top: 16px;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+/* 狀態指示器 */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-inactive {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+/* QR Code 容器 */
+.qr-code-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.qr-code-container img {
+  max-width: 256px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 說明區塊 */
+.info-section {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.warning-section {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.success-section {
+  background-color: #e8f5e8;
+  border-left: 4px solid #4caf50;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+/* 恢復碼樣式 */
+.recovery-codes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.recovery-code-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.code-number {
+  color: #666;
+  margin-right: 8px;
+  min-width: 20px;
+}
+
+.code-value {
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .mat-mdc-card {
+    margin: 10px;
+    max-width: none;
+  }
+
+  .mat-mdc-card-header,
+  .mat-mdc-card-content {
+    padding: 16px;
+  }
+
+  .recovery-codes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 無障礙設計 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
