@@ -1,0 +1,14 @@
+{
+  "filePath": ".spec-workflow/specs/login-authentication/design.md",
+  "currentVersion": 1,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2025-09-25T07:48:09.726Z",
+      "trigger": "initial",
+      "approvalId": "approval_1758786489680_tn1l3ldj2",
+      "approvalTitle": "登入頁面功能設計文件"
+    }
+  ]
+}

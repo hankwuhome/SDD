@@ -1,0 +1,96 @@
+{
+  "測試說明": "以下是在 Swagger UI 中測試 MOTP API 的 JSON 資料範例",
+
+  "步驟1_綁定設備": {
+    "端點": "POST /api/OTP/bind-device",
+    "資料": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "deviceName": "我的測試手機",
+      "userEmail": "test@example.com"
+    }
+  },
+
+  "步驟2_驗證設備設置": {
+    "端點": "POST /api/OTP/verify-setup",
+    "資料": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "deviceName": "我的測試手機",
+      "otpCode": "請輸入TOTP應用程式顯示的6位數驗證碼"
+    }
+  },
+
+  "步驟3_驗證OTP": {
+    "端點": "POST /api/OTP/verify",
+    "資料": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "otpCode": "請輸入TOTP應用程式顯示的最新6位數驗證碼"
+    }
+  },
+
+  "步驟4_查看設備": {
+    "端點": "GET /api/OTP/devices/{userId}",
+    "參數": "12345678-1234-1234-1234-123456789012"
+  },
+
+  "步驟5_產生備用驗證碼": {
+    "端點": "POST /api/OTP/generate-recovery-codes",
+    "資料": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "count": 10
+    }
+  },
+
+  "步驟6_使用備用驗證碼": {
+    "端點": "POST /api/OTP/verify",
+    "資料": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "otpCode": "請輸入步驟5產生的其中一個備用驗證碼"
+    }
+  },
+
+  "步驟7_刪除設備": {
+    "端點": "DELETE /api/OTP/device/{userId}/{deviceId}",
+    "參數說明": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "deviceId": "從步驟4的回應中取得設備ID"
+    }
+  },
+
+  "其他測試資料": {
+    "第二個測試使用者": {
+      "userId": "87654321-4321-4321-4321-210987654321",
+      "userEmail": "user2@example.com",
+      "deviceName": "Android 測試機"
+    },
+
+    "多設備測試": [
+      {
+        "deviceName": "iPhone 15",
+        "userEmail": "test@example.com"
+      },
+      {
+        "deviceName": "Samsung Galaxy",
+        "userEmail": "test@example.com"
+      }
+    ]
+  },
+
+  "錯誤測試案例": {
+    "無效GUID": {
+      "userId": "invalid-guid-format",
+      "說明": "測試錯誤的GUID格式處理"
+    },
+
+    "重複設備名稱": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "deviceName": "我的測試手機",
+      "說明": "使用已存在的設備名稱"
+    },
+
+    "無效OTP": {
+      "userId": "12345678-1234-1234-1234-123456789012",
+      "otpCode": "000000",
+      "說明": "使用無效的OTP驗證碼"
+    }
+  }
+}

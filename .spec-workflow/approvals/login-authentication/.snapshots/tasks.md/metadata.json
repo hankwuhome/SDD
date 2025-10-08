@@ -1,0 +1,14 @@
+{
+  "filePath": ".spec-workflow/specs/login-authentication/tasks.md",
+  "currentVersion": 1,
+  "snapshots": [
+    {
+      "version": 1,
+      "filename": "snapshot-001.json",
+      "timestamp": "2025-09-25T07:51:50.004Z",
+      "trigger": "initial",
+      "approvalId": "approval_1758786709906_b2nn030d6",
+      "approvalTitle": "登入頁面功能任務分解文件"
+    }
+  ]
+}

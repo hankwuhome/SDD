@@ -1,0 +1,17 @@
+# Spec Workflow MCP Server Configuration File
+# ============================================
+
+# Project directory path
+projectDir = "."
+
+# Dashboard port
+port = 3456
+
+# Auto-start dashboard
+autoStartDashboard = true
+
+# Language - 設定為繁體中文
+lang = "zh-TW"
+
+# Dashboard-only mode - 只運行 dashboard
+dashboardOnly = true 
